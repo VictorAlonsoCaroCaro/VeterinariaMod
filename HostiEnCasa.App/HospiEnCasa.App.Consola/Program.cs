@@ -2,18 +2,37 @@
 using HostiEnCasa.App.Persistencia;
 using System;
 
-namespace HostiEnCasa.App.Consola
+namespace HospiEnCasa.App.Consola
 {
     public class Program
     {
-        private static IRepositorioPersona _repositorioPersona = new RepositorioPersona( new Persistencia.AppContext()); 
-        private static IRepositorioPaciente _repositorioPaciente = new RepositorioPaciente( new Persistencia.AppContext()); 
+        private static IRepositorioPersona _repositorioPersona = new RepositorioPersona( new HostiEnCasa.App.Persistencia.AppContext()); 
+        private static IRepositorioPaciente _repositorioPaciente = new RepositorioPaciente( new HostiEnCasa.App.Persistencia.AppContext()); 
+
+        private static IPersonaRepository _personaRepository = new PersonaRepository( new HostiEnCasa.App.Persistencia.AppContext() );
 
         public static void Main(string[] args)
         {            
             Console.WriteLine("Registrando una persona");
             //addPersona();
-            addPaciente();
+            //addPaciente();
+
+            var persona = new Persona{
+                Nombre = "Juan Carlos",
+                Apellidos = "Zambrano",
+                NumeroTelefono = "3123445566",
+                Genero = Genero.Masculino,
+                Discriminator = "Persona"
+            };
+
+            var result = _personaRepository.Add(persona);
+
+            if( result > 0){
+                Console.WriteLine("Se inserto la persona");
+            }else{
+                Console.WriteLine("No se pudo insertar");
+            }
+
         }        
 
         public static void addPersona(){
