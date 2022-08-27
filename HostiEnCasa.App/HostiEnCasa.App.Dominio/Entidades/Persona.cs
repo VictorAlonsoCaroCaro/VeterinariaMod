@@ -11,6 +11,6 @@ namespace HostiEnCasa.App.Dominio
         public Genero Genero { get; set; }
         public String Discriminator { get; set; }
 
-        public List<Enfermera> Enfermeras { get; set; }
+        //public List<Enfermera> Enfermeras { get; set; }
     }
 }

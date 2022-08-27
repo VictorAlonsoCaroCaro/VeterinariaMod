@@ -3,7 +3,7 @@ namespace HostiEnCasa.App.Dominio
     /// <summary>Class <c>Enfermera</c>
     /// Modela una Persona del personal de enfermería del equipo medico de apoyo 
     /// </summary>   
-    public class Enfermera
+    public class Enfermera : Persona
     {
         /// Numero único de la tarjeta profesional   
         public string TarjetaProfesional { get; set; }
