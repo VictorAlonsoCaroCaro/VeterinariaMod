@@ -10,3 +10,15 @@ D:\Temp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\
 D:\Temp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\refint\HostiEnCasa.App.Dominio.dll
 D:\Temp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.pdb
 D:\Temp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\ref\HostiEnCasa.App.Dominio.dll
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\bin\Debug\net5.0\HostiEnCasa.App.Dominio.deps.json
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\bin\Debug\net5.0\HostiEnCasa.App.Dominio.dll
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\bin\Debug\net5.0\ref\HostiEnCasa.App.Dominio.dll
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\bin\Debug\net5.0\HostiEnCasa.App.Dominio.pdb
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.AssemblyInfo.cs
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.dll
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\ref\HostiEnCasa.App.Dominio.dll
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HostiEnCasa.App.Dominio\obj\Debug\net5.0\HostiEnCasa.App.Dominio.pdb

@@ -11,6 +11,5 @@ namespace HostiEnCasa.App.Dominio
         FrecuenciaRespiratoria,
         SaturacionOxigeno,
         TemperaturaCorporal
-
     }
 }

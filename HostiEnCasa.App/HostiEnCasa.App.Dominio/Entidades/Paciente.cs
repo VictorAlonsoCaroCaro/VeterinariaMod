@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace HostiEnCasa.App.Dominio
 {
@@ -14,6 +15,7 @@ namespace HostiEnCasa.App.Dominio
         public float Longitud { get; set; }
         // Ciudad de residencia del Paciente
         public string Ciudad { get; set; }
+
         public DateTime FechaNacimiento { get; set; }
         /// Relacion entre Paciente y su FamiliarDesignado para cuidarlo
         public FamiliarDesignado Familiar { get; set; }
@@ -27,6 +29,7 @@ namespace HostiEnCasa.App.Dominio
         ///  Referencia a la lista de signos vitales de un Paciente 
         /// </summary>
         /// <value></value>
-        public System.Collections.Generic.List<SignoVital> SignosVitales { get; set; }
+        public List<SignoVital> SignosVitales { get; set; }        
+
     }
 }

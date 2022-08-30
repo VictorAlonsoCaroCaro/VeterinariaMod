@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vr8rgHL2MOfsUif5Jna2vGQ2KQ/ycM7KYW2XUMBPOhgE28/SGXt9MFNmtYUSM25rPbWGlfAt4OhIg6fNOWZFJQ==",
+  "dgSpecHash": "BugYNYIV6TPcO1lWRR7IGZjTg47nCy4Ddb1uI1jY+9VjbFvLLQAFF2eA6E3Y8cmyuXZBZA01edIZ5yIh9F0HGQ==",
   "success": true,
-  "projectFilePath": "D:\\Temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\jczambrano\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\jczambrano\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\jczambrano\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -10,5 +10,7 @@ namespace HostiEnCasa.App.Dominio
         public String NumeroTelefono { get; set; }
         public Genero Genero { get; set; }
         public String Discriminator { get; set; }
+
+        //public List<Enfermera> Enfermeras { get; set; }
     }
 }
