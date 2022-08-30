@@ -11,9 +11,18 @@ namespace HostiEnCasa.App.Persistencia{
             _appContext = context;
         }
 
-        int IPersonaRepository.Add(Persona persona){
+        int IPersonaRepository.AdicionarPersona(Persona persona){
             _appContext.Personas.Add(persona);
             return _appContext.SaveChanges();
+        }
+
+        bool IPersonaRepository.Add(Persona persona){
+            _appContext.Personas.Add(persona);
+            return (_appContext.SaveChanges() > 0 ? true : false);            
+        }
+
+        Persona IPersonaRepository.Buscar(int id){
+            return _appContext.Personas.Find(id);
         }
 
     }

@@ -18,21 +18,34 @@ namespace HospiEnCasa.App.Consola
             //addPaciente();
 
             var persona = new Persona{
-                Nombre = "Juan Carlos",
-                Apellidos = "Zambrano",
-                NumeroTelefono = "3123445566",
-                Genero = Genero.Masculino,
-                Discriminator = "Persona"
+                Nombre = "Marisol",
+                Apellidos = "Uribe",
+                NumeroTelefono = "3001234567",
+                Genero = Genero.Femenino,
+                Discriminator = "Enfermera"
             };
 
-            var result = _personaRepository.Add(persona);
+            /*
+            try
+            {
+                var result = _personaRepository.AdicionarPersona(persona);
 
-            if( result > 0){
-                Console.WriteLine("Se inserto la persona");
-            }else{
-                Console.WriteLine("No se pudo insertar");
+                if( result > 0 )
+                    Console.WriteLine("Se inserto correctamente");
+                else
+                    Console.WriteLine("No se pudo insertar");   
+                
+            }catch (System.Exception e)
+            {
+                Console.WriteLine("Ocurrio un error: " + e );
+                throw;
             }
+            */
 
+            var result = _personaRepository.Buscar(2);
+
+            Console.WriteLine( result.Nombre + ' ' + result.Apellidos );
+                        
         }        
 
         public static void addPersona(){

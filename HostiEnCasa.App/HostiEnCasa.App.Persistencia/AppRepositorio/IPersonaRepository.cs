@@ -4,9 +4,9 @@ using HostiEnCasa.App.Dominio;
 namespace HostiEnCasa.App.Persistencia{
 
     public interface IPersonaRepository{
-
-        int Add(Persona persona);
-
+        int AdicionarPersona(Persona persona);
+        bool Add(Persona persona);
+        Persona Buscar(int id);
     }
 
 }
