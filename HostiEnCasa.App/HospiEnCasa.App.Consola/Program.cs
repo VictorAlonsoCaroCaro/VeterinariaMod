@@ -13,19 +13,33 @@ namespace HospiEnCasa.App.Consola
 
         public static void Main(string[] args)
         {            
-            Console.WriteLine("Registrando una persona");
+            
             //addPersona();
             //addPaciente();
+            //FindAll(); 
+            //FindByName();          
+            //Update();
+            //Delete();    
+            //FindAll();        
+            //ObtenerTodasPersonas();
+            //BuscarPorNombre();
+            //Buscador();
+            //ActualizarPersona();
+            EliminarPersona();
+        }        
+
+        public static void addPersona(){
+            
+            Console.WriteLine("Registrando una persona");
 
             var persona = new Persona{
-                Nombre = "Marisol",
-                Apellidos = "Uribe",
-                NumeroTelefono = "3001234567",
-                Genero = Genero.Femenino,
-                Discriminator = "Enfermera"
+                Nombre = "Juan Carlos",
+                Apellidos = "Zambrano Montealegre",
+                NumeroTelefono = "317123456",
+                Genero = Genero.Masculino,
+                Discriminator = "Sr"
             };
 
-            /*
             try
             {
                 var result = _personaRepository.AdicionarPersona(persona);
@@ -39,25 +53,7 @@ namespace HospiEnCasa.App.Consola
             {
                 Console.WriteLine("Ocurrio un error: " + e );
                 throw;
-            }
-            */
-
-            var result = _personaRepository.Buscar(2);
-
-            Console.WriteLine( result.Nombre + ' ' + result.Apellidos );
-                        
-        }        
-
-        public static void addPersona(){
-            var persona = new Persona{
-                Nombre = "Juan Carlos",
-                Apellidos = "Zambrano Montealegre",
-                NumeroTelefono = "317123456",
-                Genero = Genero.Masculino,
-                Discriminator = "Sr"
-            };
-
-            _repositorioPersona.AddPersona(persona);
+            }            
         }
 
         public static void addPaciente(){
@@ -76,5 +72,148 @@ namespace HospiEnCasa.App.Consola
             _repositorioPaciente.AddPaciente(paciente);
         }
 
+        public static void FindAll(){
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("Listado de personas");
+            Console.WriteLine("-----------------------------------------------");
+            
+            var resultGeneral = _personaRepository.GetAll();
+
+            foreach (var resultPersona in resultGeneral)
+            {
+                Console.WriteLine("Id: " + resultPersona.Id +", Nombres: " + resultPersona.Nombre + ", Apellido: " + resultPersona.Apellidos);
+            }
+        }
+
+        public static void FindByName(){
+
+            var result = _personaRepository.FindByName("Carlos");
+
+            foreach (var persona in result)
+            {
+                Console.WriteLine("Id: " + persona.Id +", Nombres: " + persona.Nombre + ", Apellido: " + persona.Apellidos);
+            }
+        }
+
+        public static void Find(){
+
+            var result = _personaRepository.Buscar(2);
+            Console.WriteLine( result.Nombre + ' ' + result.Apellidos );
+        }
+
+        public static void Update(){
+
+            var result = _personaRepository.Buscar(1);
+
+            if( result != null){
+
+                result.Apellidos = "Montealegre";
+                result.NumeroTelefono = "3009876543";
+
+                var res = _personaRepository.Update(result);
+
+                if(res > 0){
+                    Console.WriteLine("Se actualizo con exito");
+                }else{
+                    Console.WriteLine("No fue posible actualizar");
+                }
+            }else{
+                Console.WriteLine("No existe persona a actualizar");
+            }
+
+        }
+
+        public static void Delete(){
+
+            var result = _personaRepository.Buscar(1);
+
+            if( result != null){
+
+                var res = _personaRepository.Delete(result);
+
+                if(res > 0){
+                    Console.WriteLine("Se elimino con exito");
+                }else{
+                    Console.WriteLine("No fue posible eliminar");
+                }
+            }else{
+                Console.WriteLine("No existe persona a eliminar");
+            }
+
+        }
+
+        public static void ObtenerTodasPersonas(){
+
+            var listadoPersonas = _personaRepository.ObtenerTodasPersonas();
+
+            foreach (var persona in listadoPersonas)
+            {
+                Console.WriteLine("Id: " + persona.Id + ", Nombre: " + persona.Nombre + ", Apellido: " + persona.Apellidos + ", Número teléfono: " + persona.NumeroTelefono);
+            }
+
+        }
+
+        public static void BuscarPorNombre(){
+             
+             var listadoPersonas = _personaRepository.ObtenerPersonaPorNombre( "Ped" );
+
+             foreach (var persona in listadoPersonas)
+             {
+                Console.WriteLine("Id: " + persona.Id + ", Nombre: " + persona.Nombre + ", Apellido: " + persona.Apellidos + ", Número teléfono: " + persona.NumeroTelefono);
+             }
+
+        }
+
+        public static void Buscador(){
+             
+             var listadoPersonas = _personaRepository.Buscador( "12" );
+
+             foreach (var persona in listadoPersonas)
+             {
+                Console.WriteLine("Id: " + persona.Id + ", Nombre: " + persona.Nombre + ", Apellido: " + persona.Apellidos + ", Número teléfono: " + persona.NumeroTelefono);
+             }
+
+        }
+
+        public static void ActualizarPersona(){
+
+            var persona = _personaRepository.Buscar(3);
+
+            if( persona != null){
+
+                persona.NumeroTelefono = "30099887766";
+                persona.Apellidos = "Zambrano";
+                persona.Nombre = "Juan Carlos";
+
+                var result = _personaRepository.ActualizarPersona(persona);
+
+                if( result > 0 )
+                    Console.WriteLine("Se actualizo con exito, se afectaron " + result + " registros.");
+                else
+                    Console.WriteLine("No se logro actualizar");
+
+            }else{
+                Console.WriteLine("No existe la persona a actualizar");
+            }
+        }
+
+        public static void EliminarPersona(){
+
+            var persona = _personaRepository.Buscar(3);
+
+            if( persona != null){
+
+                var result = _personaRepository.EliminarPersona(persona);
+
+                if( result > 0 )
+                    Console.WriteLine("Se elimino con exito, se afectaron " + result + " registros.");
+                else
+                    Console.WriteLine("No se logro eliminar");
+
+            }else{
+                Console.WriteLine("No existe la persona a eliminar");
+            }
+        }
+       
     }
 }

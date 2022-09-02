@@ -1,0 +1,22 @@
+﻿@page
+@model HospiEnCasa.WebApp.ListModel
+@{
+}
+<h1>Listado de personas</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var persona in Model.listaPersonas)
+        {
+            <tr>
+                <td>@persona.Id</td>
+                <td>@persona.Nombre</td>
+            </tr>    
+        }               
+    </tbody>
+</table>
