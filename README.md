@@ -1,6 +1,5 @@
-# VeterinariaMod
-Proyecto creado en python para adminstrar un modulo de una veterinaria
+# HostiEnCasa
+Proyecto creado en C# para adminstrar un modulo de ciudado medico en casa
 
 # Lenguaje de programación
-
-Python
+C#
