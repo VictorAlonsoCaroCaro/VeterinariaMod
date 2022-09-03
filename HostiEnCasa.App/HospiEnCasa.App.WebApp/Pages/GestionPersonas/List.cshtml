@@ -1,0 +1,44 @@
+﻿@page
+@model HospiEnCasa.App.WebApp.ListModel
+@{
+    ViewData["Title"] = "Listado de personas";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 col-sm-12">
+
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <h1>Listado de personas</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Número teléfonico</th>
+                        <th>Genero</th>
+                        <th>Discriminador</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var persona in Model.listadoPersonas)
+                    {
+                        <tr>
+                            <td scope="row">@persona.Id</td>
+                            <td>@persona.Nombre</td>
+                            <td>@persona.Apellidos</td>
+                            <td>@persona.NumeroTelefono</td>
+                            <td>@persona.Genero</td>
+                            <td>@persona.Discriminator</td>
+                        </tr> 
+                    }                                       
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2 col-sm-12">
+
+        </div>
+    </div>
+</div>
