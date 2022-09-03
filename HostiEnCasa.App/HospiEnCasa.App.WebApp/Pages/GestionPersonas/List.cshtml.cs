@@ -17,7 +17,7 @@ namespace HospiEnCasa.App.WebApp
         public void OnGet()
         {
             listadoPersonas = new List<Persona>();
-            listadoPersonas = _personaRepository.ObtenerTodo();
+            //listadoPersonas = _personaRepository.ObtenerTodo();
         }
     }
 }

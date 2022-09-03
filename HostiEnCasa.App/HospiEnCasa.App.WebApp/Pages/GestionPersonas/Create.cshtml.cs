@@ -17,7 +17,7 @@ namespace HospiEnCasa.App.WebApp
         public void OnGet()
         {
         }
-
+/*
         public void OnPost(){
             var nombre = Request.Form["nombre"];
             var apellido = Request.Form["apellido"];
@@ -44,6 +44,34 @@ namespace HospiEnCasa.App.WebApp
                 Console.WriteLine("No se pudo insertar");
             }
             
+        }
+*/
+        public void OnPost(){
+            //Captura de datos
+            var nombre = Request.Form["nombre"];
+            var apellido = Request.Form["apellido"];
+            var telefono = Request.Form["telefono"];
+            var genero = Request.Form["genero"];
+            var discriminador = Request.Form["discriminador"];
+
+            //Validar los datos recibidos del cliente
+
+            var persona = new Persona{
+                Nombre = nombre,
+                Apellidos = apellido,
+                NumeroTelefono = telefono,
+                Genero = (genero == 0 ? Genero.Femenino : Genero.Masculino),
+                Discriminator = discriminador
+            };
+
+            var result = _personaRepository.AdicionarPersona(persona);
+
+            if(result > 0){
+                Console.WriteLine("Se regitro la persona correctamente");
+            }else{
+                Console.WriteLine("No se puedo registrar la persona");
+            }
+
         }
     }
 }
