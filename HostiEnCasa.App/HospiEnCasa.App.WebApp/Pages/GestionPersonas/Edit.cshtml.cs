@@ -9,15 +9,21 @@ using HostiEnCasa.App.Persistencia;
 
 namespace HospiEnCasa.App.WebApp
 {
-    public class ListModel : PageModel
+    public class EditModel : PageModel
     {
         private IPersonaRepository _personaRepository = new PersonaRepository( new HostiEnCasa.App.Persistencia.AppContext() );
-        public List<Persona> listadoPersonas { get; set;}
+        public Persona persona;
 
-        public void OnGet()
+        public IActionResult OnGet(int Id)
         {
-            listadoPersonas = new List<Persona>();
-            listadoPersonas = _personaRepository.ObtenerTodo();
+            persona = _personaRepository.Buscar(Id);
+
+            if(persona == null){
+                return RedirectToPage("./Listado");
+                //ViewData["mensaje"] = "No existe la persona a actualizar";
+            }else{
+                return Page();
+            }
         }
     }
 }

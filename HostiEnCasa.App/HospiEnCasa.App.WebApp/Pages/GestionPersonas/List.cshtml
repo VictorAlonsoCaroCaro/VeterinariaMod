@@ -19,11 +19,26 @@
                         <th>Apellido</th>
                         <th>Número teléfonico</th>
                         <th>Genero</th>
-                        <th>Discriminador</th>
+                        <th>Tipo Persona</th>
+                        <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                                                       
+                    @foreach( var persona in Model.listadoPersonas){
+                        <tr>
+                            <td>@persona.Id</td>
+                            <td>@persona.Nombre</td>
+                            <td>@persona.Apellidos</td>
+                            <td>@persona.NumeroTelefono</td>
+                            <td>@persona.Genero</td>
+                            <td>@persona.Discriminator</td>
+                            <td>
+                                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-Id="@persona.Id">
+                                    <i class="far fa-edit"></i>Editar
+                                </a>
+                            </td>
+                        </tr>
+                    }
                 </tbody>
             </table>
         </div>

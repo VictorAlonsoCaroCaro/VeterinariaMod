@@ -72,3 +72,5 @@ C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCas
 C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\bin\Debug\net5.0\HostiEnCasa.App.Dominio.pdb
 C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\bin\Debug\net5.0\HostiEnCasa.App.Persistencia.pdb
 C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\obj\Debug\net5.0\Razor\Pages\GestionPersonas\List.cshtml.g.cs
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\obj\Debug\net5.0\Razor\Pages\GestionPersonas\Edit.cshtml.g.cs
+C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\obj\Debug\net5.0\Razor\Pages\GestionPersonas\Listado.cshtml.g.cs
