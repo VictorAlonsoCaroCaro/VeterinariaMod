@@ -19,11 +19,47 @@ namespace HospiEnCasa.App.WebApp
             persona = _personaRepository.Buscar(Id);
 
             if(persona == null){
-                return RedirectToPage("./Listado");
+                return RedirectToPage("./List");
                 //ViewData["mensaje"] = "No existe la persona a actualizar";
             }else{
                 return Page();
             }
+        }
+
+        public IActionResult OnPost(){
+
+            //Capturar los datos
+            var id = Request.Form["Id"];
+            var nombre = Request.Form["nombre"];
+            var apellido = Request.Form["apellido"];
+            var telefono = Request.Form["telefono"];
+            var genero = Request.Form["genero"];
+            
+            //Validar los datos
+
+            var personaResult = _personaRepository.Buscar( Int32.Parse(id) );
+
+            if( personaResult != null){
+
+                personaResult.Nombre = nombre;
+                personaResult.Apellidos = apellido;
+                personaResult.NumeroTelefono = telefono;
+                personaResult.Genero = (genero == "0" ? Genero.Femenino : Genero.Masculino);
+            
+                var result = _personaRepository.Update(personaResult);
+
+                if( result > 0){
+                    ViewData["mensaje"] = "Se actualizo correctamente";
+                }else{
+                    ViewData["mensaje"] = "No se pudo actualizar";
+                }
+
+            }else{
+                ViewData["mensaje"] = "La persona a actualizar no existe";
+            }
+
+            return RedirectToPage("./List");
+            
         }
     }
 }
