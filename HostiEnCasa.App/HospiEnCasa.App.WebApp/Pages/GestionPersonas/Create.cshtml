@@ -2,16 +2,19 @@
 @model HospiEnCasa.App.WebApp.CreateModel
 @{
     ViewData["Title"] = "Registro de personas";
+    ViewData["script"] = "personaCreate.js";
 }
 
-<div class="container">
+<div class="container bg-white border border-secondary rounded-25">
     <div class="row">
         <div class="col-md-2 col-12">
 
         </div>
         <div class="col-md-8 col-12">
+            <br>
+            <br>
             <h1>Registro de personas</h1>
-            <form method="post">
+            <form method="post" id="form-registro">
                 <div class="form-group">
                     <label for="nombre">Nombres</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite sus nombres" minlength="3" maxlength="50">
@@ -46,6 +49,8 @@
                 <button type="submit" class="btn btn-primary">Registrar</button>
                 <button type="reset" class="btn btn-default">Limpiar</button>
             </form>
+            <br>
+            <br>
         </div>
         <div class="col-md-2 col-12">
 

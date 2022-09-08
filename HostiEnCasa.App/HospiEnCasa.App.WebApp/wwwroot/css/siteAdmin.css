@@ -9,13 +9,13 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: 008000;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #008000;
+  border-color: #006000;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -61,7 +61,6 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  background-image: url(../images/fondo.jpg); 
 }
 .footer {
   position: absolute;
@@ -69,17 +68,4 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
-}
-
-label.error, .invalid {
-  color: red;
-  font-size: 1rem;
-  display: block;
-  margin-top: 5px;
-}
-
-input.error {
-  border: 1px dashed red;
-  font-weight: 300;
-  color: red;
 }
