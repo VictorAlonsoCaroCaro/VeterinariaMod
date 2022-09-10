@@ -3,6 +3,7 @@
 @{
     Layout = "_LayoutAdmin";
     ViewData["Title"] = "Listado de personas";
+    ViewData["script"] = "personaList.js";
 }
 
 <div class="container bg-white border border-secondary rounded-25">
@@ -36,10 +37,10 @@
                             <td>@persona.Genero</td>
                             <td>@persona.Discriminator</td>
                             <td>
-                                <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-Id="@persona.Id">
+                                <a class="btn btn-primary table-btn" id="actualizar" >
                                     <i class="far fa-edit"></i>Editar
                                 </a>
-                                <a class="btn btn-default table-btn" asp-page="./Remove" asp-route-Id="@persona.Id">
+                                <a class="btn btn-default table-btn" id="eliminar" name="eliminar">
                                     <i class="far fa-remove"></i>Eliminar
                                 </a>
                             </td>
@@ -54,4 +55,76 @@
 
         </div>
     </div>
+</div>
+
+<!-- Modal Eliminar -->
+<div class="modal" tabindex="-1" role="dialog" id="modalEliminar">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Eliminación de usuarios</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>¿Desea eliminar la persona?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Si</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Actualizar -->
+<div class="modal" tabindex="-1" role="dialog" id="modalEditar">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Actualización de personas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form method="post">
+                        <input type="hidden" id="Id" name="Id">
+                        <div class="form-group">
+                            <label for="nombre">Nombres</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite sus nombres" minlength="3" maxlength="50" >
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellidos</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Digite sus apellidos" minlength="3" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Número de telefono</label>
+                            <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Digite su número teléfonico" min="3000000000" max="3999999999" step="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="genero">Genero</label>
+                            <select class="form-control" id="genero" name="genero">
+                                <option value="" selected="selected">Seleccione...</option>
+                                <option value="0">Femenino</option>
+                                <option value="1">Masculino</option>
+                            </select>
+                        </div>                                                                
+                    </form>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Actualizar</button>
+        <button type="reset" class="btn btn-secondary">Limpiar</button>
+      </div>
+    </div>
+  </div>
 </div>
