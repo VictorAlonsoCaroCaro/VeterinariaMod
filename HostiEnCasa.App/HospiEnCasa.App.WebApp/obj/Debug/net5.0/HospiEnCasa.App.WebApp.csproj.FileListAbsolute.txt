@@ -150,4 +150,3 @@ C:\Users\jczambrano\Downloads\temp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.Ap
 C:\Users\jczambrano\Downloads\temp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\obj\Debug\net5.0\ref\HospiEnCasa.App.WebApp.dll
 C:\Users\jczambrano\Downloads\temp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\obj\Debug\net5.0\Razor\Pages\Shared\_LayoutAdmin.cshtml.g.cs
 C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\obj\Debug\net5.0\Razor\Pages\Shared\_LayoutAdmin.cshtml.g.cs
-C:\Users\zambr\Downloads\ProyectosTemp\VeterinariaMod\HostiEnCasa.App\HospiEnCasa.App.WebApp\obj\Debug\net5.0\Razor\Pages\Shared\_LayoutLogin.cshtml.g.cs

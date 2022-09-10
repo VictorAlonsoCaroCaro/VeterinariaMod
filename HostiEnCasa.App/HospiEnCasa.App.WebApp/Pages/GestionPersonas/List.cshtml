@@ -3,9 +3,8 @@
 @{
     Layout = "_LayoutAdmin";
     ViewData["Title"] = "Listado de personas";
-    ViewData["script"] = "personaList.js";
+    ViewData["script"] = "personaList.js";    
 }
-
 <div class="container bg-white border border-secondary rounded-25">
     <div class="row">
         <div class="col-md-2 col-sm-12">
@@ -14,8 +13,17 @@
         <div class="col-md-8 col-sm-12">
             <br>
             <br>
+            @{
+              if(Model.mensaje != ""){
+                <div class="alert alert-primary" role="alert">
+                    @Model.mensaje
+                </div>
+              }
+            }            
+            <br>
+            <br>
             <h1>Listado de personas</h1>
-            <table class="table">
+            <table class="table" id="tablePersonas">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -37,10 +45,15 @@
                             <td>@persona.Genero</td>
                             <td>@persona.Discriminator</td>
                             <td>
-                                <a class="btn btn-primary table-btn" id="actualizar" >
+                                <!--
+                                <a class="btn btn-primary" asp-page="./Edit" asp-route-Id="@persona.Id">
                                     <i class="far fa-edit"></i>Editar
                                 </a>
-                                <a class="btn btn-default table-btn" id="eliminar" name="eliminar">
+                                -->
+                                <a class="btn btn-primary" id="editar">
+                                    <i class="far fa-edit"></i>Editar
+                                </a>
+                                <a class="btn btn-secondary">
                                     <i class="far fa-remove"></i>Eliminar
                                 </a>
                             </td>
@@ -83,7 +96,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Actualización de personas</h5>
+        <h5 class="modal-title">Editar personas</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -92,7 +105,8 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <form method="post">
+                    <form method="post" action="" id="formEditar">
+                        @Html.AntiForgeryToken()
                         <input type="hidden" id="Id" name="Id">
                         <div class="form-group">
                             <label for="nombre">Nombres</label>
@@ -122,7 +136,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Actualizar</button>
+        <button type="button" class="btn btn-primary" id="btnActualizar">Actualizar</button>
         <button type="reset" class="btn btn-secondary">Limpiar</button>
       </div>
     </div>
