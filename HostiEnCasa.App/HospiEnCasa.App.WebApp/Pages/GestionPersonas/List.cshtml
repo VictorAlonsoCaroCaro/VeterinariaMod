@@ -120,12 +120,13 @@
                             <label for="telefono">Número de telefono</label>
                             <input type="number" class="form-control" id="telefono" name="telefono" placeholder="Digite su número teléfonico" min="3000000000" max="3999999999" step="1">
                         </div>
+                        @using HostiEnCasa.App.Dominio
                         <div class="form-group">
                             <label for="genero">Genero</label>
                             <select class="form-control" id="genero" name="genero">
                                 <option value="" selected="selected">Seleccione...</option>
-                                <option value="0">Femenino</option>
-                                <option value="1">Masculino</option>
+                                <option value="@Genero.Femenino">Femenino</option>
+                                <option value="@Genero.Masculino">Masculino</option>
                             </select>
                         </div>                                                                
                     </form>

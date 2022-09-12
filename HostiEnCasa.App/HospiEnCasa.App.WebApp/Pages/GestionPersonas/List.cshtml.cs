@@ -32,7 +32,6 @@ namespace HospiEnCasa.App.WebApp
 
         public IActionResult OnPostUpdateJson([FromBody]Persona persona)
         {
-            
             var personaResult = _personaRepository.Buscar( persona.Id );
             var mensaje = "";
 
@@ -41,7 +40,7 @@ namespace HospiEnCasa.App.WebApp
                 personaResult.Nombre = persona.Nombre;
                 personaResult.Apellidos = persona.Apellidos;
                 personaResult.NumeroTelefono = persona.NumeroTelefono;
-                //personaResult.Genero = (persona.Genero == "0" ? Genero.Femenino : Genero.Masculino);
+                personaResult.Genero = (persona.Genero == 0 ? Genero.Femenino : Genero.Masculino);
             
                 var result = _personaRepository.Update(personaResult);
 

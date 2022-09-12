@@ -28,7 +28,10 @@ $().ready(function(){
                     break;
                 case 3:
                     $('#telefono').val($(this).text());
-                    break;                  
+                    break;
+                case 4:
+                    $('#genero').val($(this).text());
+                    break;
             }
         });
 
@@ -59,8 +62,10 @@ $().ready(function(){
         });
         */
 
+        var genero = ($("#genero").val() == "Femenino" ? 0 : 1);
+
         /* Enviar petición AJAX datos JSON */
-        var persona = { "Id": $("#Id").val(), "Nombre": $("#nombre").val(), "Apellidos": $("#apellido").val(), "NumeroTelefono": $("#telefono").val() };
+        var persona = { "Id": $("#Id").val(), "Nombre": $("#nombre").val(), "Apellidos": $("#apellido").val(), "NumeroTelefono": $("#telefono").val(), "Genero": genero };
 
         $.ajax({
             type: "POST",
@@ -74,9 +79,11 @@ $().ready(function(){
         })
         .done(function (result) {
             alert(result);
+            console.log(result);
             location.reload();
         })
         .fail(function (error) {
+            console.log(result);
             alert(error);
         });
 
