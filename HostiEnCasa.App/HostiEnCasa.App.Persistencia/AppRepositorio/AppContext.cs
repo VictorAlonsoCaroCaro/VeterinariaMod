@@ -19,7 +19,9 @@ namespace HostiEnCasa.App.Persistencia
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-               .UseSqlServer("Server=LAPTOP-5I9PKCH7; Database=HospiEnCasa; Integrated Security=True;");
+               .UseSqlServer("Server=CSTCO503072; Database=HospiEnCasa; Integrated Security=True;");
+
+               //.UseSqlServer("Server=LAPTOP-5I9PKCH7; Database=HospiEnCasa; Integrated Security=True;");
             }
         }
 

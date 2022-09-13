@@ -1,1 +1,7 @@
 HostiEnCasa.App/HostiEnCasa.App.Persistencia/Migrations/*
+HostiEnCasa.App/HostiEnCasa.App.Persistencia/bin/Debug/*
+HostiEnCasa.App/HostiEnCasa.App.Persistencia/obj/Debug/*
+HostiEnCasa.App/HostiEnCasa.App.Dominio/bin/Debug/*
+HostiEnCasa.App/HostiEnCasa.App.Dominio/obj/Debug/*
+HostiEnCasa.App/HostiEnCasa.App.WebApp/bin/Debug/*
+HostiEnCasa.App/HostiEnCasa.App.WebApp/obj/Debug/*
