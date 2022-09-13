@@ -20,7 +20,6 @@ namespace HospiEnCasa.App.WebApp
 
             if(persona == null){
                 return RedirectToPage("./List");
-                //ViewData["mensaje"] = "No existe la persona a actualizar";
             }else{
                 return Page();
             }
@@ -36,7 +35,6 @@ namespace HospiEnCasa.App.WebApp
             var genero = Request.Form["genero"];
             
             //Validar los datos
-
             var personaResult = _personaRepository.Buscar( Int32.Parse(id) );
 
             if( personaResult != null){

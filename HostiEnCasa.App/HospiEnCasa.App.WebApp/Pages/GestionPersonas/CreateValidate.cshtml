@@ -1,0 +1,67 @@
+﻿@page
+@model HospiEnCasa.App.WebApp.CreateValidateModel
+@{
+    ViewData["Title"] = "Registro de personas";    
+    Layout = "_LayoutAdmin";
+}
+
+<div class="container bg-white border border-secondary rounded-25">
+    <div class="row">
+        <div class="col-md-2 col-12">
+
+        </div>
+        <div class="col-md-8 col-12">
+            <br>
+            <br>
+            <h1>Registro de personas</h1>
+            <!--<div asp-validation-summary="All"></div>-->
+            <form method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombres</label>
+                    <input type="text" class="form-control" placeholder="Digite sus nombres" minlength="3" maxlength="50" asp-for="persona.Nombre">
+                    <span class="text-danger" asp-validation-for="persona.Nombre"></span>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellidos</label>
+                    <input type="text" class="form-control" placeholder="Digite sus apellidos" minlength="3" maxlength="50" asp-for="persona.Apellidos">
+                    <span class="text-danger" asp-validation-for="persona.Apellidos"></span>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Número de telefono</label>
+                    <input type="number" class="form-control" placeholder="Digite su número teléfonico" min="3000000000" max="3999999999" step="1" asp-for="persona.NumeroTelefono">
+                    <span class="text-danger" asp-validation-for="persona.NumeroTelefono"></span>
+                </div>
+                @using HostiEnCasa.App.Dominio
+                <div class="form-group">
+                    <label for="genero">Genero</label>
+                    <select class="form-control" asp-for="persona.Genero">
+                        <option value="" selected="selected">Seleccione...</option>
+                        <option value="@Genero.Femenino">Femenino</option>
+                        <option value="@Genero.Masculino">Masculino</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="persona.Genero"></span>
+                </div>
+                <div class="form-group">
+                    <label for="discriminador">Discriminador</label>
+                    <select class="form-control" asp-for="persona.Discriminator">
+                        <option value="" selected="selected">Seleccione...</option>
+                        <option value="Persona">Persona Natural</option>
+                        <option value="Medico">Medico</option>
+                        <option value="Paciente">Paciente</option>
+                        <option value="Enfermera">Enfermera</option>
+                        <option value="FamiliarDesignado">Familiar Designado</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="persona.Discriminator"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="reset" class="btn btn-default">Limpiar</button>
+            </form>
+            <br>
+            <br>
+        </div>
+        <div class="col-md-2 col-12">
+
+        </div>
+    </div>
+</div>
+

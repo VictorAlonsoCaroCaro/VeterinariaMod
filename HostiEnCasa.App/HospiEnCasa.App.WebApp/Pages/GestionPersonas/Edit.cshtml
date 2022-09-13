@@ -2,9 +2,7 @@
 @model HospiEnCasa.App.WebApp.EditModel
 @{
     ViewData["Title"] = "Edición de personas";
-    var persona = Model.persona;
-    var mensaje = ViewData["mensaje"];
-    ViewData["mensaje"] = "";
+    var persona = Model.persona;    
 }
 
 <div class="container bg-white border border-secondary rounded-25">
@@ -39,12 +37,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Actualizar</button>
-                <button type="reset" class="btn btn-default">Limpiar</button>
-                @if( mensaje != "" ){
-                    <div class="alert alert-danger" role="alert">
-                        @mensaje
-                    </div>
-                }                
+                <button type="reset" class="btn btn-default">Limpiar</button>                           
             </form>
             <br>
             <br>

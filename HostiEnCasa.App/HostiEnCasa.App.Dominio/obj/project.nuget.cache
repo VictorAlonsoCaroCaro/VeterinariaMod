@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tSqpaZEV9743YnNjVgtDKxo3lJVGx6xaEcaDVLBt8isHdEsni/w5WBTz6cq3538Er0r0mWf1aCWSelXfJMyMwQ==",
+  "dgSpecHash": "Symv/xicOI0RbMZBHBusOzE2hbubU7CYjzeuREAT3KTkFeyRk5fqsRAvsGMu2R2zej25FIb3WFVPfwAWZErGcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zambr\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
