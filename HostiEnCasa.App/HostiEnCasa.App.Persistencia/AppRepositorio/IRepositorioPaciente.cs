@@ -13,7 +13,7 @@ namespace HostiEnCasa.App.Persistencia
         void DeletePaciente(int idPaciente);    
         Paciente GetPaciente(int idPaciente);
         Medico AsignarMedico(int idPaciente, int idMedico);
-
+        Paciente GetPacienteAll(int idPaciente);
     }
 
 }

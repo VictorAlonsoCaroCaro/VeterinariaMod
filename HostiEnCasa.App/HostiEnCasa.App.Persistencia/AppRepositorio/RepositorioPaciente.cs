@@ -91,5 +91,25 @@ namespace HostiEnCasa.App.Persistencia
             return null;
 
         }
+
+        Paciente IRepositorioPaciente.GetPacienteAll(int idPaciente){
+            /*
+            var paciente = from paciente in _appContext.Pacientes
+                            inner join signos in _appContext.SignosVitales
+                            on paciente.Id equals signos.PacienteId
+                            where 
+                            paciente.Id = idPaciente
+                           select new Paciente{
+                              Id = paciente.Id,
+                              Nombre = paciente.Nombre,
+                              Apellidos = paciente.Apellidos,
+                              SignosVitales = signos
+                           };
+
+            return paciente;
+            */
+
+            return _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+        }
     }
 }

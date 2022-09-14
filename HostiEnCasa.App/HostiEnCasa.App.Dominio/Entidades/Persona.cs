@@ -13,14 +13,16 @@ namespace HostiEnCasa.App.Dominio
         [StringLength(50, ErrorMessage="La longitud maxima son 50 caracteres.")]
         public string Apellidos { get; set; }
         [Required(ErrorMessage="El número teléfonico es requerido")]
-        [StringLength(50, ErrorMessage="La longitud maxima son 50 caracteres.")]
+        [StringLength(20, ErrorMessage="La longitud maxima son 50 caracteres.")]
         public string NumeroTelefono { get; set; }
         [Required(ErrorMessage="El Genero es requerido")]
         public Genero Genero { get; set; }
         [Required(ErrorMessage="El Tipo de persona es requerido")]
         [StringLength(50, ErrorMessage="La longitud maxima son 50 caracteres.")]
         public string Discriminator { get; set; }
-
+        [Required(ErrorMessage="El Número de documento es requerido")]
+        [StringLength(50, ErrorMessage="La longitud maxima son 20 caracteres.")]
+        public string NoDocumento { get; set; }
         //public List<Enfermera> Enfermeras { get; set; }
     }
 }
