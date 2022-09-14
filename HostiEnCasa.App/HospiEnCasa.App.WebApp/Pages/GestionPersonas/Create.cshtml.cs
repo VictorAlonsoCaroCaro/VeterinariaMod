@@ -13,9 +13,12 @@ namespace HospiEnCasa.App.WebApp
     {
 
         private IPersonaRepository _personaRepository = new PersonaRepository( new HostiEnCasa.App.Persistencia.AppContext() );
+        private IRepositorioPaciente _pacienteRepository = new RepositorioPaciente( new HostiEnCasa.App.Persistencia.AppContext() );
 
         public void OnGet()
         {
+            var paciente = _pacienteRepository.GetPacienteAll(2);
+            Console.WriteLine(paciente.SignosVitales);
         }
 
         public void OnPost(){
@@ -44,6 +47,13 @@ namespace HospiEnCasa.App.WebApp
                 Console.WriteLine("No se pudo insertar");
             }
             
+        }
+
+        public IActionResult OnPostConsultarPersona(string documento){
+
+            var persona = _personaRepository.BuscarPorNoDocumento(documento);
+
+            return new JsonResult( persona );
         }
 
     

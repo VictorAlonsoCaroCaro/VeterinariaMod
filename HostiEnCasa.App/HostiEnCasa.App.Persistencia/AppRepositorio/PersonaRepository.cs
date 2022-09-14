@@ -75,5 +75,9 @@ namespace HostiEnCasa.App.Persistencia{
             return _appContext.SaveChanges();
         }
 
+        Persona IPersonaRepository.BuscarPorNoDocumento(string NoDocumento){
+            return _appContext.Personas.Where( p => p.NoDocumento == NoDocumento ).FirstOrDefault();
+        }
+
     }
 }

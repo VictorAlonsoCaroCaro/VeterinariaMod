@@ -65,7 +65,13 @@ $().ready(function(){
         var genero = ($("#genero").val() == "Femenino" ? 0 : 1);
 
         /* Enviar petición AJAX datos JSON */
-        var persona = { "Id": $("#Id").val(), "Nombre": $("#nombre").val(), "Apellidos": $("#apellido").val(), "NumeroTelefono": $("#telefono").val(), "Genero": genero };
+        var persona = { 
+            "Id": $("#Id").val(), 
+            "Nombre": $("#nombre").val(), 
+            "Apellidos": $("#apellido").val(), 
+            "NumeroTelefono": $("#telefono").val(), 
+            "Genero": genero 
+        };
 
         $.ajax({
             type: "POST",

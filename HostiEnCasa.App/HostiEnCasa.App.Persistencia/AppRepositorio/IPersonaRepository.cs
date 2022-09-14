@@ -21,6 +21,7 @@ namespace HostiEnCasa.App.Persistencia{
         IEnumerable<Persona> Buscador(string busqueda);
         int ActualizarPersona(Persona persona);
         int EliminarPersona(Persona persona);
+        Persona BuscarPorNoDocumento(string NoDocumento);
     }
 
 }

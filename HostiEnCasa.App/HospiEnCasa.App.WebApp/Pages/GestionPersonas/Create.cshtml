@@ -15,6 +15,11 @@
             <br>
             <h1>Registro de personas</h1>
             <form method="post" id="form-registro">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <label for="nombre">Número de documento</label>
+                    <input type="text" class="form-control" id="noDocumento" name="noDocumento" placeholder="Digite su documento de identidad" minlength="4" maxlength="12">
+                </div>
                 <div class="form-group">
                     <label for="nombre">Nombres</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Digite sus nombres" minlength="3" maxlength="50">

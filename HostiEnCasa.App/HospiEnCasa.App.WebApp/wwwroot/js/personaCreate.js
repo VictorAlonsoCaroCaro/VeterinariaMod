@@ -4,6 +4,33 @@ $().ready(function() {
         //e.preventDefault();        
     });
 
+    $("#noDocumento").on('blur', function(e){
+        $.ajax({
+            type: "POST",
+            url: "/GestionPersonas/Create?handler=ConsultarPersona",
+            //contentType: "application/html; charset=utf-8",
+            dataType: "json",
+            headers: {
+                "RequestVerificationToken": $('input:hidden[name="__RequestVerificationToken"]').val()
+            },
+            data: { "documento" : $("#noDocumento").val() },
+        })
+        .done(function (result) {
+            if( result != null){
+                $("#nombre").val(result.nombre);
+                $("#apellido").val(result.apellidos);
+                $("#telefono").val(result.numeroTelefono);
+            }else{
+                alert("No existe la persona");
+            }
+            console.log(result);
+        })
+        .fail(function (error) {
+            console.log(result);
+            alert(error);
+        });  
+    });
+
     $("#form-registro").validate({
         //errorClass: "invalid",
         //validClass: "success",

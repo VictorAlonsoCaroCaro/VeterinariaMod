@@ -20,9 +20,26 @@
                 </div>
               }
             }            
+            <br>            
+            <br>
+            <h1>Crear personas</h1>
+            <br>
+            <a class="btn btn-primary" id="crear">
+                <i class="far fa-edit"></i>Crear Persona
+            </a>
+            <div class="form-group">
+                <label for="personas">Listado de personas</label>
+                <select class="form-control" id="personas" name="personas">
+                    <option value="" selected="selected">Seleccione...</option>
+                    @foreach (var persona in Model.listadoPersonas)
+                    {
+                      <option value="@persona.Id">@persona.Nombre @persona.Apellidos</option>
+                    }                   
+                </select>
+            </div>
             <br>
             <br>
-            <h1>Listado de personas</h1>
+            <h1>Listado de personas</h1>            
             <table class="table" id="tablePersonas">
                 <thead>
                     <tr>
