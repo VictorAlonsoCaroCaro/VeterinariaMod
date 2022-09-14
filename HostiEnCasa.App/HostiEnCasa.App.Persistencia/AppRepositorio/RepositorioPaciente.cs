@@ -49,9 +49,10 @@ namespace HostiEnCasa.App.Persistencia
             return _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
         }
 
-        Paciente IRepositorioPaciente.UpdatePaciente(Paciente paciente)
+        int IRepositorioPaciente.UpdatePaciente(Paciente paciente)
         {
             var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == paciente.Id);
+
             if (pacienteEncontrado != null)
             {
                 pacienteEncontrado.Nombre = paciente.Nombre;
@@ -67,12 +68,26 @@ namespace HostiEnCasa.App.Persistencia
                 pacienteEncontrado.Enfermera = paciente.Enfermera;
                 pacienteEncontrado.Medico = paciente.Medico;
                 pacienteEncontrado.Historia = paciente.Historia;
+                pacienteEncontrado.SignosVitales = paciente.SignosVitales;
 
-                _appContext.SaveChanges();
-
-
+                return _appContext.SaveChanges();
             }
-            return pacienteEncontrado;
+            return 0;
+        }
+
+        List<Paciente> IRepositorioPaciente.GetPacienteSignoFrecuencia(){
+            return _appContext.Pacientes.Where(p => 
+                p.SignosVitales.Any(s => s.Signo == TipoSigno.FrecuenciaCardica && s.Valor > 90)
+                //&& p.NoDocumento == ""
+            ).ToList();
+        }
+
+        List<SignoVital> IRepositorioPaciente.GetSignosPaciente(int idPaciente){
+            var paciente = _appContext.Pacientes
+                        .Where(p => p.Id == idPaciente)
+                        .Include( s => s.SignosVitales )
+                        .ToList();
+            return paciente;
         }
 
         Medico IRepositorioPaciente.AsignarMedico(int idPaciente, int idMedico)

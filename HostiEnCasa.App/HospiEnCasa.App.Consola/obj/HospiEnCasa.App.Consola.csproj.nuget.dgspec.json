@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj": {}
+    "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj": {
+    "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj",
+        "projectUniqueName": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj",
         "projectName": "HospiEnCasa.App.Consola",
-        "projectPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj",
-        "packagesPath": "C:\\Users\\zambr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\obj\\",
+        "projectPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\HospiEnCasa.App.Consola.csproj",
+        "packagesPath": "C:\\Users\\jczambrano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HospiEnCasa.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zambr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jczambrano\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj"
+              "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj"
               },
-              "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj": {
-                "projectPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj"
+              "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj": {
+                "projectPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj"
               }
             }
           }
@@ -78,7 +74,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -87,25 +84,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj": {
+    "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
         "projectName": "HostiEnCasa.App.Dominio",
-        "projectPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\zambr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\jczambrano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zambr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jczambrano\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,13 +123,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -145,25 +145,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj": {
+    "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj",
         "projectName": "HostiEnCasa.App.Persistencia",
-        "projectPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\zambr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\obj\\",
+        "projectPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\HostiEnCasa.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\jczambrano\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zambr\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jczambrano\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -177,8 +173,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj": {
-                "projectPath": "C:\\Users\\zambr\\Downloads\\ProyectosTemp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj"
+              "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj": {
+                "projectPath": "C:\\Users\\jczambrano\\Downloads\\temp\\VeterinariaMod\\HostiEnCasa.App\\HostiEnCasa.App.Dominio\\HostiEnCasa.App.Dominio.csproj"
               }
             }
           }
@@ -220,7 +216,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -229,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

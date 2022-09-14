@@ -1,5 +1,7 @@
 ﻿using HostiEnCasa.App.Dominio;
 using HostiEnCasa.App.Persistencia;
+using System.Collections.Generic;
+
 using System;
 
 namespace HospiEnCasa.App.Consola
@@ -15,7 +17,8 @@ namespace HospiEnCasa.App.Consola
         {            
             
             //addPersona();
-            //addPaciente();
+            addPaciente();
+            //agregarSignoPaciente(2);
             //FindAll(); 
             //FindByName();          
             //Update();
@@ -25,7 +28,7 @@ namespace HospiEnCasa.App.Consola
             //BuscarPorNombre();
             //Buscador();
             //ActualizarPersona();
-            EliminarPersona();
+            //EliminarPersona();
         }        
 
         public static void addPersona(){
@@ -67,9 +70,48 @@ namespace HospiEnCasa.App.Consola
                 Longitud = 5.075114F,
                 Latitud = -75.52990F,
                 Ciudad = "Yumbo",
-                FechaNacimiento = new DateTime(1990, 06, 28)
+                FechaNacimiento = new DateTime(1990, 06, 28),
+                SignosVitales = new List<SignoVital>{
+                    new SignoVital{ FechaHora = new DateTime(2022, 09, 13), Valor = 80, Signo = TipoSigno.TensionArterial },
+                    new SignoVital{ FechaHora = new DateTime(2022, 09, 13), Valor = 120, Signo = TipoSigno.FrecuenciaCardica },
+                    new SignoVital{ FechaHora = new DateTime(2022, 09, 13), Valor = 60, Signo = TipoSigno.FrecuenciaRespiratoria }
+                }
             };
             _repositorioPaciente.AddPaciente(paciente);
+        }
+
+        public static void agregarSignoPaciente(int id){
+            var paciente = _repositorioPaciente.GetPaciente(id);
+
+            if( paciente != null){
+
+                //paciente.Nombre = "Cambio de nombre";
+
+                if(paciente.SignosVitales != null){
+                    //Inserta uno mas al listado
+                    paciente.SignosVitales.Add(
+                        new SignoVital{ FechaHora = new DateTime(2022, 09, 14), Valor = 40, Signo = TipoSigno.TemperaturaCorporal }
+                    );
+                }else{
+                    //Inserta primera vez
+                    paciente.SignosVitales = new List<SignoVital>{
+                        new SignoVital{ FechaHora = new DateTime(2022, 09, 13), Valor = 80, Signo = TipoSigno.TensionArterial },
+                        new SignoVital{ FechaHora = new DateTime(2022, 09, 13), Valor = 120, Signo = TipoSigno.FrecuenciaCardica },
+                        new SignoVital{ FechaHora = new DateTime(2022, 09, 13), Valor = 60, Signo = TipoSigno.FrecuenciaRespiratoria }
+                    };
+                }
+
+                var result = _repositorioPaciente.UpdatePaciente(paciente);
+
+                if( result > 0 )
+                    Console.WriteLine("Se actualizo el paciente con exito, se afectaron " + result + " registros.");
+                else
+                    Console.WriteLine("No se logro actualizar el paciente");
+
+            }else{
+                Console.WriteLine("No existe el paciente a actualizar");
+            }
+            
         }
 
         public static void FindAll(){

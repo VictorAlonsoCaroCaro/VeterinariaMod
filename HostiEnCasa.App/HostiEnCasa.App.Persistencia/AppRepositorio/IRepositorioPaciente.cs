@@ -9,11 +9,13 @@ namespace HostiEnCasa.App.Persistencia
     {
         IEnumerable<Paciente> GetAllPacientes();
         Paciente AddPaciente(Paciente paciente);
-        Paciente UpdatePaciente(Paciente paciente);
+        int UpdatePaciente(Paciente paciente);
         void DeletePaciente(int idPaciente);    
         Paciente GetPaciente(int idPaciente);
         Medico AsignarMedico(int idPaciente, int idMedico);
         Paciente GetPacienteAll(int idPaciente);
+        List<Paciente> GetPacienteSignoFrecuencia();
+        List<SignoVital> GetSignosPaciente(int idPaciente);
     }
 
 }
