@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using HostiEnCasa.App.Dominio;
+using Microsoft.EntityFrameworkCore;
 
 namespace HostiEnCasa.App.Persistencia
 {
@@ -22,11 +23,10 @@ namespace HostiEnCasa.App.Persistencia
         }
 
 
-        Paciente IRepositorioPaciente.AddPaciente(Paciente paciente)
+        int IRepositorioPaciente.AddPaciente(Paciente paciente)
         {
             var pacienteAdicionado = _appContext.Pacientes.Add(paciente);
-            _appContext.SaveChanges();
-            return pacienteAdicionado.Entity;
+            return _appContext.SaveChanges();
 
         }
 
@@ -85,9 +85,27 @@ namespace HostiEnCasa.App.Persistencia
         List<SignoVital> IRepositorioPaciente.GetSignosPaciente(int idPaciente){
             var paciente = _appContext.Pacientes
                         .Where(p => p.Id == idPaciente)
-                        .Include( s => s.SignosVitales )
-                        .ToList();
-            return paciente;
+                        .Include( p => p.SignosVitales )
+                        .FirstOrDefault();
+
+            return paciente.SignosVitales;
+        }
+
+        List<SignoVital> IRepositorioPaciente.GetSignosPacienteQuery(int idPaciente){
+            
+            var signosVitales = from paciente in _appContext.Pacientes
+                                join signos in _appContext.SignosVitales
+                                on paciente.Id equals signos.PacienteId
+                                where 
+                                paciente.Id == idPaciente
+                                select new SignoVital{
+                                    Id = signos.Id,
+                                    FechaHora = signos.FechaHora,
+                                    Valor = signos.Valor,
+                                    Signo = signos.Signo                                    
+                                };
+
+            return signosVitales.ToList();            
         }
 
         Medico IRepositorioPaciente.AsignarMedico(int idPaciente, int idMedico)
@@ -106,25 +124,6 @@ namespace HostiEnCasa.App.Persistencia
             return null;
 
         }
-
-        Paciente IRepositorioPaciente.GetPacienteAll(int idPaciente){
-            /*
-            var paciente = from paciente in _appContext.Pacientes
-                            inner join signos in _appContext.SignosVitales
-                            on paciente.Id equals signos.PacienteId
-                            where 
-                            paciente.Id = idPaciente
-                           select new Paciente{
-                              Id = paciente.Id,
-                              Nombre = paciente.Nombre,
-                              Apellidos = paciente.Apellidos,
-                              SignosVitales = signos
-                           };
-
-            return paciente;
-            */
-
-            return _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
-        }
+        
     }
 }

@@ -15,5 +15,7 @@ namespace HostiEnCasa.App.Dominio
         public float Valor {get;set;}
         /// Tipo de Signo vital medido
         public TipoSigno Signo { get; set; }
+        public int PacienteId { get; set; }
+
     }
 }

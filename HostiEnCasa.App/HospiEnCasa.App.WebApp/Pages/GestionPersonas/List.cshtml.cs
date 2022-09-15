@@ -59,5 +59,21 @@ namespace HospiEnCasa.App.WebApp
             return Content(mensaje);
 
         } 
+
+        public IActionResult OnPostCreate([FromBody]Persona persona){
+            
+            //Validar los datos recibidos
+
+            var result = _personaRepository.AdicionarPersona(persona);
+
+            //Mostrar al front el resultado de la operación
+            if( result > 0){
+                return Content("Se inserto la persona con exito");
+            }else{
+                return Content("No se logro insertar la persona");
+            }
+
+        }
+
     }
 }

@@ -51,6 +51,16 @@
                         <option value="FamiliarDesignado">Familiar Designado</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="signos">Signos vitales</label>
+                    <select class="form-control" id="signos" name="signos">
+                        <option value="" selected="selected">Seleccione...</option>
+                        @foreach (var persona in Model.listadoPersonas)
+                        {
+                            <option value="@persona.Id">@persona.Nombre</option>
+                        }
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-primary">Registrar</button>
                 <button type="reset" class="btn btn-default">Limpiar</button>
             </form>
