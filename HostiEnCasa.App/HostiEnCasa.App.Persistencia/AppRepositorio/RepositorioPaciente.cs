@@ -22,12 +22,10 @@ namespace HostiEnCasa.App.Persistencia
         }
 
 
-        Paciente IRepositorioPaciente.AddPaciente(Paciente paciente)
+        int IRepositorioPaciente.AddPaciente(Paciente paciente)
         {
-            var pacienteAdicionado = _appContext.Pacientes.Add(paciente);
-            _appContext.SaveChanges();
-            return pacienteAdicionado.Entity;
-
+            var pacienteAdicionado = _appContext.Pacientes.Add(paciente);            
+            return _appContext.SaveChanges();
         }
 
         void IRepositorioPaciente.DeletePaciente(int idPaciente)
@@ -82,13 +80,14 @@ namespace HostiEnCasa.App.Persistencia
             ).ToList();
         }
 
+        /*
         List<SignoVital> IRepositorioPaciente.GetSignosPaciente(int idPaciente){
             var paciente = _appContext.Pacientes
                         .Where(p => p.Id == idPaciente)
                         .Include( s => s.SignosVitales )
                         .ToList();
             return paciente;
-        }
+        }*/
 
         Medico IRepositorioPaciente.AsignarMedico(int idPaciente, int idMedico)
         {

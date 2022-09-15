@@ -10,6 +10,14 @@ $().ready(function(){
     });
     */
 
+    $("#personas").change(function(){
+        alert("Seleccionó el elemento" + $("#personas").val())
+    });
+
+    $("#crearPersona").click(function(){
+        $("#modalRegistrar").modal('show');
+    });
+
     $(document).on('click', '#tablePersonas tbody tr td a.btn.btn-secondary', function(){
         $('#modalEliminar').modal('show');
     });
@@ -36,6 +44,43 @@ $().ready(function(){
         });
 
         $('#modalEditar').modal('show');
+
+    });
+
+    $("#btnRegistrar").click(function(){
+
+        //Aqui debe haber un proceso de validación
+
+        var genero = ($("#generoR").val() == "Femenino" ? 0 : 1);
+
+        var persona = {
+            "NoDocumento": $("#noDocumentoR").val(), 
+            "Nombre": $("#nombreR").val(), 
+            "Apellidos": $("#apellidoR").val(), 
+            "NumeroTelefono": $("#telefonoR").val(), 
+            "Discriminator": $("#discriminadorR").val(), 
+            "Genero": genero 
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "/GestionPersonas/List?handler=Create",
+            contentType: "application/json; charset=utf-8",
+            dataType: "html",
+            headers: {
+                "RequestVerificationToken": $('input:hidden[name="__RequestVerificationToken"]').val()
+            },
+            data: JSON.stringify(persona),
+        })
+        .done(function (result) {
+            alert(result);
+            console.log(result);
+            location.reload();
+        })
+        .fail(function (error) {
+            console.log(result);
+            alert(error);
+        });
 
     });
 
